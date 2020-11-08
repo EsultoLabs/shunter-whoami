@@ -1,2 +1,2 @@
-# shunter-whoami
-Simple docker image to test shunter's routing. 
+# Shunter Whoami
+Simple docker image to test shunter's routing
