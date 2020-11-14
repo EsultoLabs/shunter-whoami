@@ -28,7 +28,7 @@ app.use('*', (req, res) => {
     res.write(`<h3>Forwarded IP: <span style="color: gray;">${req.headers['x-forwarded-for'] || "seem you aren't forwarded"}</span></h3>`);
     res.end();
   } catch (err) {
-    console.error(err);  
+    logger.error(err);  
   }
 })
 
