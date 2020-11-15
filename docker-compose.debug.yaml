@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  shunter-whoami:
+    build: .
+    command: ["nodemon", "--inspect=9229"]
+    user: 1000:1000
+    volumes:
+      - .:/usr/src/app
+    ports: 
+      - "3000:3000"
+      - "9229:9229"

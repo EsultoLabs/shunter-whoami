@@ -1,13 +1,19 @@
 FROM node:lts-alpine
 
-WORKDIR /usr/sources/app
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-COPY package*.json ./
+RUN npm install -g nodemon
 
-RUN npm --only=production install
+# Install app dependencies
+COPY package.json /usr/src/app/package.json
+RUN npm --only=production install && npm ls
+RUN mv /usr/src/app/node_modules /node_modules
 
-COPY . .
+# Bundle app source
+COPY . /usr/src/app
 
 EXPOSE 3000
 
-CMD ["npm", "run", "start"]
+CMD node .

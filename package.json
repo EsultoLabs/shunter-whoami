@@ -1,6 +1,6 @@
 {
   "name": "shunter-whoami",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Simple docker image to test shunter's routing",
   "author": "Sgobbi Federico <federico@sgobbi.it>",
   "license": "MIT",
