@@ -18,7 +18,7 @@ app.use('*', (req, res) => {
     res.write(`<h3>I'm Shunter whoami's container</h3>`);
     res.write(`<br>`);
     res.write(`<h3>Domain: <span style="color: gray;">${req.headers.host}</span></h3>`);
-    res.write(`<h3>Cluster node: <span style="color: gray;">${os.hostname()}</span></h3>`);
+    res.write(`<h3>Container ID: <span style="color: gray;">${os.hostname()}</span></h3>`);
     res.write(`<h3>Container IP: <span style="color: gray;">${req.connection.localAddress}</span></h3>`);
     res.write(`<h3>Container port: <span style="color: gray;">${req.connection.localPort}</span></h3>`);
     res.write(`<br>`);
